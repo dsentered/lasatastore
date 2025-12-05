@@ -12,9 +12,13 @@ export default async function DashboardLayout({ children }: { children: ReactNod
     const session = await auth.api.getSession({
         headers: await headers()
     })
-
+    console.log("session", session)
     if (!session) {
         return redirect("/login")
+    }
+
+    if (session.user.role === "USER") {
+        return redirect("/home")
     }
 
     const navUser = {

@@ -96,7 +96,7 @@ export const signInSocialCustomer = async (provider: "google") => {
     const { url } = await auth.api.signInSocial({
         body: {
             provider,
-            callbackURL: "/frontend/dashboard"
+            callbackURL: "/welcome"
         },
     });
 

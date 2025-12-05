@@ -58,7 +58,7 @@ export default function SignupForm() {
             console.log("response", response)
             if (response.success) {
                 toast.success(response.message);
-                router.push("/dashboard");
+                router.push("/welcome");
             } else {
                 toast.error(response.message);
             }

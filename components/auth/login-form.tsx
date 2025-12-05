@@ -52,7 +52,7 @@ export function LoginForm() {
             const response = await loginUser(values);
             if (response.success) {
                 toast.success(response.message);
-                router.push("/dashboard");
+                router.push("/welcome");
             } else {
                 // console.log("error on form", response)
                 toast.error(response.message);
